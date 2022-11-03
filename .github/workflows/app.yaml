@@ -42,10 +42,4 @@ jobs:
           T_MAX: 60
           T_MIN: 20
 
-      - name: Run linter
-        run: |
-          pipenv run lint
 
-      - name: Run formatting check
-        run: |
-          pipenv run format --check

@@ -1,0 +1,51 @@
+# .github/workflows/app.yaml
+name: HVAC_CONTROLLER
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      # Setup Python (faster than using Python container)
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.7"
+
+      - name: Install pipenv
+        run: |
+          python -m pip install --upgrade pipenv wheel
+
+      - id: cache-pipenv
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
+
+      - name: Install dependencies
+        if: steps.cache-pipenv.outputs.cache-hit != 'true'
+        run: |
+          pipenv install --deploy --dev
+
+      - name: Run test suite
+        run: |
+          pipenv run test
+        env:
+          HVAC_HOST: http://159.203.50.71
+          HVAC_TOKEN: Y4A6Q3fEri
+          HVAC_TICKETS: 3
+          T_MAX: 60
+          T_MIN: 20
+
+      - name: Run linter
+        run: |
+          pipenv run lint
+
+      - name: Run formatting check
+        run: |
+          pipenv run format --check

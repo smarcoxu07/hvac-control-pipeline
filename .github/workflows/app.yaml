@@ -38,6 +38,6 @@ jobs:
         env:
           HVAC_HOST: ${{ secrets.HVAC_HOST }}
           HVAC_TOKEN: ${{ secrets.HVAC_TOKEN }}
-          HVAC_TICKETS: 3
+          HVAC_TICKETS: ${{ secrets.HVAC_TICKETS }}
           T_MAX: 60
           T_MIN: 20

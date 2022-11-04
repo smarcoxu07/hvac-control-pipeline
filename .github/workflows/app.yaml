@@ -36,10 +36,8 @@ jobs:
         run: |
           pipenv run test
         env:
-          HVAC_HOST: http://159.203.50.71
-          HVAC_TOKEN: Y4A6Q3fEri
+          HVAC_HOST: ${{ secrets.HVAC_HOST }}
+          HVAC_TOKEN: ${{ secrets.HVAC_TOKEN }}
           HVAC_TICKETS: 3
           T_MAX: 60
           T_MIN: 20
-
-

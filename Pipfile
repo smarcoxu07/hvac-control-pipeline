@@ -24,3 +24,4 @@ python_version = "3.8"
 [scripts]
 test = "python -m unittest"
 lint = "pylint src test"
+start = "python src/main.py"

@@ -61,6 +61,8 @@ Le détails du code est le suivant, nous allons passer au travers rapidement pou
 
 Le dossier **_.github_** contient l'ensemble du pipeline que nous allons décrire dans la suite du laboratoire.
 
+---
+
 ### 2. Le dossier _/src_
 
 Le dossier **/src** contient l'ensemble du code fonctionnel pour lancer le serveur.
@@ -243,6 +245,8 @@ if __name__ == '__main__':
     main.start()
 ```
 
+---
+
 ### 3. Le dossier _/test_
 
 Le dossier **/test** contient l'ensemble du code permettant de tester l'application.
@@ -347,6 +351,8 @@ if __name__ == '__main__':
 ```
 
 Si nous nous intéressons uniquement aux parties de test, nous y retrouver 2 types de tests : Les tests de réponse du serveur HVAC (**_TestStringMethods_**) et les tests de fonctionnement du controleur HVAC (**_TestHVACMethods_**). Ces derniers vont tester le fonctionnement de la climatisation et du chauffage pendant un nombre de tickets définies au sein des variables d'environnements (**_TICKETS = os.environ["HVAC_TICKETS"]_**).
+
+---
 
 ### 4. Fichiers restants
 

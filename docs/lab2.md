@@ -20,7 +20,7 @@ En résumé, Oxygène Software vous demande d’implémenter le pipeline CI suiv
 
 Pour tester l’application Oxygène CS, Oxygène Software a mis en ligne une application web qui permet le contrôle manuel des unités HVAC. De plus, elle a rendu disponible l’API qui doit être utilisée pour contrôler les unités et recevoir les données de température :
 
-[Serveur HVAC](_http://159.203.50.71_)
+[Serveur HVAC](http://159.203.50.71)
 
 ---
 

@@ -37,17 +37,17 @@ Lien du Discord afin d’échanger avec le chargé de laboratoire : _https://dis
 ### Contenu
 
 1. [Description du projet GitHub]()
-   1.1. [Le dossier _/src_]()
-   1.2. [Le dossier _/test_]()
-   1.3. [Fichiers restants]()
-2. [Récupération du projet GitHub]()
-3. [Lancement du projet controleur]()
-4. [Test du projet controleur]()
-5. [Description du pipeline]()
-6. [Test du pipeline]()
-7. [Conteneurisation de l’application]()
-8. [Construction et déploiement de l’image Docker au sein du pipeline]()
-9. [Test de l'image Docker distante]()
+2. [Le dossier _/src_]()
+3. [Le dossier _/test_]()
+4. [Fichiers restants]()
+5. [Récupération du projet GitHub]()
+6. [Lancement du projet controleur]()
+7. [Test du projet controleur]()
+8. [Description du pipeline]()
+9. [Test du pipeline]()
+10. [Conteneurisation de l’application]()
+11. [Construction et déploiement de l’image Docker au sein du pipeline]()
+12. [Test de l'image Docker distante]()
 
 ---
 
@@ -61,7 +61,7 @@ Le détails du code est le suivant, nous allons passer au travers rapidement pou
 
 Le dossier **_.github_** contient l'ensemble du pipeline que nous allons décrire dans la suite du laboratoire.
 
-#### 1.1. Le dossier _/src_
+### 2. Le dossier _/src_
 
 Le dossier **/src** contient l'ensemble du code fonctionnel pour lancer le serveur.
 
@@ -243,7 +243,7 @@ if __name__ == '__main__':
     main.start()
 ```
 
-#### 1.2. Le dossier _/test_
+### 3. Le dossier _/test_
 
 Le dossier **/test** contient l'ensemble du code permettant de tester l'application.
 
@@ -348,7 +348,7 @@ if __name__ == '__main__':
 
 Si nous nous intéressons uniquement aux parties de test, nous y retrouver 2 types de tests : Les tests de réponse du serveur HVAC (**_TestStringMethods_**) et les tests de fonctionnement du controleur HVAC (**_TestHVACMethods_**). Ces derniers vont tester le fonctionnement de la climatisation et du chauffage pendant un nombre de tickets définies au sein des variables d'environnements (**_TICKETS = os.environ["HVAC_TICKETS"]_**).
 
-#### 1.3. Fichiers restants
+### 4. Fichiers restants
 
 Le fichier **.env** regroupe les variables d'environnements nécessaire au bon fonctionnement du projet :
 
@@ -583,7 +583,7 @@ Le fichier **README.md** permet de décrire l'utilisation du projet.
 
 ---
 
-### 2. Récupération du projet sur GitHub
+### 5. Récupération du projet sur GitHub
 
 Comme expliqué dans la mise en contexte, nous allons utiliser un projet simulant un controleur d'une unité HVAC.
 
@@ -617,7 +617,7 @@ git clone {YOUR_LINK}
 
 ---
 
-### 3. Lancement du projet controleur
+### 6. Lancement du projet controleur
 
 Pour lancer le projet, nous allons nous servir de la bibliothèque _pipenv_ et du fichier _Pipfile_.
 
@@ -657,7 +657,7 @@ Votre projet est donc fonctionnel !
 
 ---
 
-### 4. Test du projet controleur
+### 7. Test du projet controleur
 
 Pour lancer les tests du projet, il suffit de lancer la commande :
 
@@ -671,7 +671,7 @@ Si les tests sont fonctionnels, vous verrez les messages suivant apparaîtrent :
 
 ---
 
-### 5. Description du pipeline
+### 8. Description du pipeline
 
 Comme expliqué dans la partie 1, le pipeline se trouve dans le dossier **./github/workflows**.
 
@@ -763,7 +763,7 @@ Ces logs peuvent nous aider à comprendre à quelle étape un pipeline aurait pu
 
 ---
 
-### 6. Test du pipeline
+### 9. Test du pipeline
 
 Pour tester le fonctionnement de notre pipeline, nous allons retourner sur VSCode et effectuer une modification sur notre code dans ce fichier ci.
 
@@ -791,7 +791,7 @@ Ensuite, rendez vous sur l'onglet "Actions" de votre repository GitHub pour y vo
 
 ---
 
-### 7. Conteneurisation de l’application
+### 10. Conteneurisation de l’application
 
 Afin de simplifier l'intégration continue, nous avons décidé d'utiliser la technologie Docker pour conteneuriser notre application.
 
@@ -815,7 +815,7 @@ Votre application est donc fonctionnel !
 
 ---
 
-### 8. Construction et déploiement de l’image Docker au sein du pipeline
+### 11. Construction et déploiement de l’image Docker au sein du pipeline
 
 Nous allons maintenant nous intéresser au deuxième pipeline qui fait partie du dossier **.github/workflows/**.
 
@@ -877,7 +877,7 @@ git push
 
 ---
 
-### 9. Test de l'image Docker distante
+### 12. Test de l'image Docker distante
 
 Pour tester l'image que vous venez de créer, il vous suffit d'ouvrir un terminal dans le répertoire du projet et de lancer la commande :
 

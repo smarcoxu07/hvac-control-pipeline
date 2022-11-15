@@ -7,5 +7,5 @@ Ce dernier est écrit en MarkDown, vous pourrez donc facilement copier et coller
 
 ## Table des matières
 
-**[Prérequis](./docs/prerequis.md)**
-**[Laboratoire 2](./docs/lab2.md)**
+- **[Prérequis](./docs/prerequis.md)**
+- **[Laboratoire 2](./docs/lab2.md)**

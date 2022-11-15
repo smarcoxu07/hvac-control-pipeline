@@ -2,27 +2,26 @@
 
 ## Prérequis
 
----
-
 ### Liste
 
 Afin de faire tourner les projets et de travailler sur vos machines, vous allez avoir besoin des configurations suivantes :
 
 - [Une mise à jour de votre WSL (Windows Subsystem for Linux vers la version 2)](#Mise-à-jour-de-votre-WSL)
-- [Une installation de Git](#git)
-- [Une installation de Node JS](#node)
-- [Une installation de Docker Desktop](#docker)
-- [Une installation de Python](#python)
-- [Une installation des bibliothèques pipenv](#pipenv)
-- [Un éditeur de code de votre choix](#code-editor)
+- [Une installation de Git](#Installation-de-Git)
+- [Une installation de Node JS](#Installation-de-Node-JS)
+- [Une installation de Docker Desktop](#Installation-de-Docker-Desktop)
+- [Une installation de Python](#Installation-de-Python)
+- [Une installation des bibliothèques pipenv](#Installation-de-la-bibliothèque-Pipenv)
+- [Un éditeur de code de votre choix](#Un-éditeur-de-code)
 
 > À noter : Si vous participez au WorkShop depuis les machines/images mises à disposition, l'ensemble des configurations auront été faites au préalable
 
 Afin de réaliser ces laboratoires, vous allez avoir besoin de plusieurs ressources qui sont listées ci dessous :
 
-- [Un compte GitHub](#github)
-- [Un token de connexion à GitHub](#github-token)
-- [Un compte DockerHub](#docker-hun)
+- [Un compte GitHub](#Création-d'un-compte-GitHub)
+- [Un token de connexion à GitHub](#Création-d'un-token-GitHub)
+- [Un compte DockerHub](#Création-d'un-compte-DockerHub)
+- [Un token de connexion à DockerHub](#Création-d'un-token-DockerHub)
 
 Le reste des ressources vous seront fournis, vous n'avez donc aucune action à effectuer pour y avoir accès. Nous les listons tout de même ici :
 
@@ -136,6 +135,8 @@ Puis, en appuyant sur le bouton Generate Token en bas de la page, onb obtient no
 ### Création d'un compte DockerHub
 
 La majeur partie du laboratoire étant sur la plateforme Docker Hub, merci de vous créer un compte avant de démarrer les sessions à l'adresse suivante : [Docker Hub](https://hub.docker.com/signup).
+
+---
 
 ### Création d'un token DockerHub
 

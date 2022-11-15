@@ -4,8 +4,6 @@
 
 Ce laboratoire a pour objectif de mettre en place un pipeline d’intégration continue et la conteneurisation d’une application.
 
----
-
 ### Mise en contexte
 
 La compagnie Oxygène Software développe une solution logicielle, appelée Oxygène CS, qui permet le contrôle d’un système CVC/HVAC (heating, ventilation, air-conditioning).
@@ -38,15 +36,18 @@ Lien du Discord afin d’échanger avec le chargé de laboratoire : _https://dis
 
 ### Contenu
 
-1. [Description du projet GitHub]()
-2. [Récupération du projet GitHub]()
-3. [Lancement du projet controleur]()
-4. [Test du projet controleur]()
-5. [Description du pipeline]()
-6. [Test du pipeline]()
-7. [Conteneurisation de l’application]()
-8. [Construction et déploiement de l’image Docker au sein du pipeline]()
-9. [Test de l'image Docker distante]()
+1. [Description du projet GitHub](#1.-Description-du-projet-HVAC-controller)
+   1.1. [Le dossier _/src_](#1.1.-Le-dossier-_/src_)
+   1.2. [Le dossier _/test_](#1.2.-Le-dossier-_/test_)
+   1.3. [Fichiers restants](#1.3.-Fichiers-restants)
+2. [Récupération du projet GitHub](#2.-Récupération-du-projet-sur-GitHub)
+3. [Lancement du projet controleur](#3.-Lancement-du-projet-controleur)
+4. [Test du projet controleur](#4.-Test-du-projet-controleur)
+5. [Description du pipeline](#5.-Description-du-pipeline)
+6. [Test du pipeline](#6.-Test-du-pipeline)
+7. [Conteneurisation de l’application](#7.-Conteneurisation-de-l’application)
+8. [Construction et déploiement de l’image Docker au sein du pipeline](#8.-Construction-et-déploiement-de-l’image-Docker-au-sein-du-pipeline)
+9. [Test de l'image Docker distante](#9.-Test-de-l'image-Docker-distante)
 
 ---
 
@@ -242,7 +243,7 @@ if __name__ == '__main__':
     main.start()
 ```
 
-#### 1.2. Le dossier /test
+#### 1.2. Le dossier _/test_
 
 Le dossier **/test** contient l'ensemble du code permettant de tester l'application.
 

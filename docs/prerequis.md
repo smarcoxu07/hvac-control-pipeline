@@ -23,7 +23,7 @@ Afin de réaliser ces laboratoires, vous allez avoir besoin de plusieurs ressour
 - [Un compte DockerHub](#Création-d'un-compte-DockerHub)
 - [Un token de connexion à DockerHub](#Création-d'un-token-DockerHub)
 
-Le reste des ressources vous seront fournis, vous n'avez donc aucune action à effectuer pour y avoir accès. Nous les listons tout de même ici :
+Le reste des ressources vous seront fournies, vous n'avez donc aucune action à effectuer pour y avoir accès. Nous les listons tout de même ici :
 
 - Un accès au HVAC Simulator (token de connexion)
 - Un accès au cluster Kubernetes pour le déploiement de vos services (fichier de configuration _kubeconfig.yaml_)
@@ -50,11 +50,11 @@ Choisissez votre plateforme et suivez les étapes les unes après les autres.
 ### Installation de Node JS
 
 Dans le cadre de ces Laboratoires, nous allons utiliser une web-application pré-développé par le chargé de laboratoire. Cette dernière fonctionnant sous JavaScript, nous allons avoir besoin d'un noyau Node JS pour le faire tourner.
-Actuellement, l'application tourne sous la version **18 LTS** trouvable au lien suivant: _https://nodejs.org/en/_
+Actuellement, l'application tourne sous la version **18 LTS** trouvable au lien suivant : _https://nodejs.org/en/_
 
 Merci de télécharger l'installateur correspondant à votre système d'exploitation puis de suivre les étapes d'installation.
 
-> N'oubliez pas de faire entrer Node JS dans vos variables d'environnements gloables ($PATH)
+> N'oubliez pas de faire entrer Node JS dans vos variables d'environnements globales ($PATH)
 
 ---
 
@@ -68,7 +68,7 @@ Merci de télécharger l'installateur correspondant à votre système d'exploita
 
 ### Installation de Python
 
-Le controlleur développé par l'entreprise Oxygen OS étant codé en Python, il est nécessaire de posséder une installation de ce dernier.
+Le contrôleur développé par l'entreprise Oxygen OS étant codé en Python, il est nécessaire de posséder une installation de ce dernier.
 Le programme tourne actuellement sous la version **3.8**, trouvable au lien suivant : _https://www.python.org/downloads/release/python-380/_
 
 Merci de télécharger l'installateur correspondant à votre système d'exploitation puis de suivre les étapes d'installation.
@@ -110,7 +110,7 @@ La majeur partie du laboratoire étant sur la plateforme GitHub, merci de vous c
 
 Dés lors que vous avez créé votre compte GitHub, il va être nécessaire de créer un Access Token GitHub pour vous utiliser les applications de ces laboratoires.
 
-Pour ce faire, rendez vous sur la page suivante : https://github.com/settings/profile puis l'onglet Developer Settings :
+Pour ce faire, rendez-vous sur la page suivante : https://github.com/settings/profile puis l'onglet Developer Settings :
 
 ![image](./assets/prerequis/settings.png)
 
@@ -118,11 +118,11 @@ Par la suite, il est nécessaire de ce rendre dans l'onglet Personal access toke
 
 ![image](./assets/prerequis/token.png)
 
-Nommez le comme vous le souhaitez et activez une éxpiration de 90 jours au minimum (la durée du workshop) ainsi qu'un accès tous les repositories :
+Nommez-le comme vous le souhaitez et activez une expiration de 90 jours au minimum (la durée du workshop) ainsi qu'un accès tous les repositories :
 
 ![image](./assets/prerequis/token_name.png)
 
-Enfin, venez activer les autorisations les unes après les autres. Dans le cadre de ce laboratoire, vous pouvez toutes les approuvées dans ce genre :
+Enfin, venez activer les autorisations les unes après les autres. Dans le cadre de ce laboratoire, vous pouvez toutes les approuver dans ce genre :
 
 ![image](./assets/prerequis/token_accept.png)
 
@@ -142,7 +142,7 @@ La majeur partie du laboratoire étant sur la plateforme Docker Hub, merci de vo
 
 Dés lors que vous avez créé votre compte Docker, il va être nécessaire de créer un Access Token Docker pour vous utiliser les applications de ces laboratoires.
 
-Pour ce faire, rendez vous sur la page suivante : _https://hub.docker.com/settings/security_ et d'appuyer sur le bouton New Access Token :
+Pour ce faire, rendez-vous sur la page suivante : _https://hub.docker.com/settings/security_ et d'appuyer sur le bouton New Access Token :
 
 ![image](./assets/prerequis/docker_hub.png)
 

@@ -8,7 +8,7 @@ Ce laboratoire a pour objectif de mettre en place un pipeline d’intégration c
 
 La compagnie Oxygène Software développe une solution logicielle, appelée Oxygène CS, qui permet le contrôle d’un système CVC/HVAC (heating, ventilation, air-conditioning).
 
-Tel qu’illustré dans la figure ci dessous, le contrôleur Oxygène CS se connecte à deux types de composants externes : un ensemble de senseurs qui fournissent diverses données, par exemple la température ambiante, et un système HVAC qui contient les équipements mécaniques permettant de chauffer, climatiser, ou ventiler une pièce. Le contrôleur reçoit la valeur des températures ambiantes (des senseurs) et envoie des commandes de contrôle au système HVAC pour maintenir la température de la pièce à une température désirée.
+Tel qu’illustré dans la figure ci-dessous, le contrôleur Oxygène CS se connecte à deux types de composants externes : un ensemble de senseurs qui fournissent diverses données, par exemple la température ambiante, et un système HVAC qui contient les équipements mécaniques permettant de chauffer, climatiser, ou ventiler une pièce. Le contrôleur reçoit la valeur des températures ambiantes (des senseurs) et envoie des commandes de contrôle au système HVAC pour maintenir la température de la pièce à une température désirée.
 
 L’analyse du processus de développement existant d’Oxygène Software a permis d’identifier la phase d’intégration du logiciel comme étant la contrainte principale à l’amélioration du flux de valeur de développement du logiciel (First way).
 
@@ -53,9 +53,9 @@ Lien du Discord afin d’échanger avec le chargé de laboratoire : _https://dis
 
 ### 1. Description du projet HVAC-controller
 
-Le projet du controleur HVAC est un petit serveur codé en **Python** et utilisant la librairire **SignalR** pour récupérer les données du [Serveur HVAC](_http://159.203.50.71_).
+Le projet du contrôleur HVAC est un petit serveur codé en **Python** et utilisant la librairire **SignalR** pour récupérer les données du [Serveur HVAC](_http://159.203.50.71_).
 
-Le détails du code est le suivant, nous allons passer au travers rapidement pour comprendre son fonctionnement.
+Le détail du code est le suivant, nous allons passer au travers rapidement pour comprendre son fonctionnement.
 
 ![image](./assets/lab2/folder.png)
 
@@ -148,7 +148,7 @@ if __name__ == '__main__':
     main.start()
 ```
 
-Les premières lignes sont consacrées à l'import des bibliothèques nécessaires au bon fonctionnement du controleur :
+Les premières lignes sont consacrées à l'import des bibliothèques nécessaires au bon fonctionnement du contrôleur :
 
 ```py
 from signalrcore.hub_connection_builder import HubConnectionBuilder
@@ -356,7 +356,7 @@ Si nous nous intéressons uniquement aux parties de test, nous y retrouver 2 typ
 
 ### 4. Fichiers restants
 
-Le fichier **.env** regroupe les variables d'environnements nécessaire au bon fonctionnement du projet :
+Le fichier **.env** regroupe les variables d'environnements nécessaires au bon fonctionnement du projet :
 
 ```
 HVAC_HOST=http://159.203.50.71
@@ -549,9 +549,9 @@ COPY . .
 ENTRYPOINT ["python3", "src/main.py"]
 ```
 
-Le fichier **LICENSE** permet de déclarer une license d'utilisation du projet (ici MIT).
+Le fichier **LICENSE** permet de déclarer une licence d'utilisation du projet (ici MIT).
 
-Le fichier **Pipfile** permet de créer un environnement virtuel pour simplifier l'utilisation du projet et de ses dépendences :
+Le fichier **Pipfile** permet de créer un environnement virtuel pour simplifier l'utilisation du projet et de ses dépendances :
 
 ```
 [[source]]
@@ -583,7 +583,7 @@ lint = "pylint src test"
 start = "python src/main.py"
 ```
 
-Le fichier **Pipfile.lock** permet de l'installation des dépendences du projet.
+Le fichier **Pipfile.lock** permet de l'installation des dépendances du projet.
 
 Le fichier **README.md** permet de décrire l'utilisation du projet.
 
@@ -591,11 +591,11 @@ Le fichier **README.md** permet de décrire l'utilisation du projet.
 
 ### 5. Récupération du projet sur GitHub
 
-Comme expliqué dans la mise en contexte, nous allons utiliser un projet simulant un controleur d'une unité HVAC.
+Comme expliqué dans la mise en contexte, nous allons utiliser un projet simulant un contrôleur d'une unité HVAC.
 
-Afin de cloner ce projet, nous allons utiliser une fonctionnalité différente de celle présentée dans le Lab 1. Cette fois ci, nous allons "Forker" le repository.
+Afin de cloner ce projet, nous allons utiliser une fonctionnalité différente de celle présentée dans le Lab 1. Cette fois-ci, nous allons "Forker" le repository.
 
-Pour ce faire, rendez vous au lien suivant : _https://github.com/MarioGith/hvac-control-pipeline_
+Pour ce faire, rendez-vous au lien suivant : _https://github.com/MarioGith/hvac-control-pipeline_
 
 Puis, il va vous falloir cliquer sur le bouton de Fork :
 
@@ -605,17 +605,17 @@ Renommez le projet comme vous le souhaitez et cliquez sur le bouton "Create Fork
 
 ![image](./assets/lab2/create_fork.png)
 
-Vous venez donc de cloner le repository du controleur HVAC. Il faut maintenant venir le télécharger en local.
+Vous venez donc de cloner le repository du contrôleur HVAC. Il faut maintenant venir le télécharger en local.
 
 > Puisque ce repository a été **forké**, il ne sera pas nécessaire de suivre la méthodologie de suppression du .git, car ce clone possède déjà vos informations propres de git.
 
-Placez vous dans le dossier où vous souhaitez y stocker le projet en local et ouvrez y un terminal (**ATTENTION** : Le dossier sélectionné doit se situer en dehors du projet metricstemi pour ne pas créer de problème de fonctionnement entre les deux applications).
+Placez-vous dans le dossier où vous souhaitez y stocker le projet en local et ouvrez un terminal (**ATTENTION** : Le dossier sélectionné doit se situer en dehors du projet metricstemi pour ne pas créer de problème de fonctionnement entre les deux applications).
 
 Allez récupérer le lien de clonage du projet grâce au bouton suivant :
 
 ![image](./assets/lab2/clone.png)
 
-Puis, copiez y la ligne de commande suivante en y insérant le lien copier à l'étape précédente à la place du _{YOUR_LINK}_ :
+Puis, copiez la ligne de commande suivante en y insérant le lien copier à l'étape précédente à la place du _{YOUR_LINK}_ :
 
 ```bash
 git clone {YOUR_LINK}
@@ -633,7 +633,7 @@ Pour commencer, il est important de se déplacer avec le terminal dans le projet
 cd {YOUR_PROJECT}
 ```
 
-Ensuite, il va être nécessaire d'installer les dépendences du projet :
+Ensuite, il va être nécessaire d'installer les dépendances du projet :
 
 ```bash
 pipenv install
@@ -671,7 +671,7 @@ Pour lancer les tests du projet, il suffit de lancer la commande :
 pipenv run test
 ```
 
-Si les tests sont fonctionnels, vous verrez les messages suivant apparaîtrent :
+Si les tests sont fonctionnels, vous verrez les messages suivants apparaître :
 
 ![image](./assets/lab2/test_ok.png)
 
@@ -681,7 +681,7 @@ Si les tests sont fonctionnels, vous verrez les messages suivant apparaîtrent :
 
 Comme expliqué dans la partie 1, le pipeline se trouve dans le dossier **./github/workflows**.
 
-Nous avons ici 2 pipelines qui se lancent, mais nous verrons d'abord le premier contenu dans le fichier **app.yaml** :
+Nous avons ici 2 pipelines qui se lancent, mais nous verrons d'abord, le premier, se trouvant dans le fichier **app.yaml** :
 
 ```yaml
 # .github/workflows/app.yaml
@@ -729,7 +729,7 @@ jobs:
           T_MIN: 20
 ```
 
-Ce dernier décrit les étapes de notre pipeline de test de l'application, de son build à son analyse statique en passant par la suite de test présentée dans le point 4. Il porte le nom de HVAC_CONTROLLER.
+Ce dernier décrit les étapes de notre pipeline de test de l'application, de son build à son analyse statique en passant par la suite de tests présentée dans le point 4. Il porte le nom de HVAC_CONTROLLER.
 
 Le nom des "steps" étant assez explicite, vous comprendrez facilement la fonction de chacune.
 
@@ -755,9 +755,9 @@ Pour revenir au Workflows, en se rendant sur la page du repository dans l'onglet
 
 ![image](./assets/lab2/workflows.png)
 
-Les états de passage sont symbolisés par les croix rouges (le pipeline a échoué) et le symbole de validation vert (le pipeline fonctionne). Les titres des essais correspondent au nom du commit qui lui est associé. En termes de métriques, on retrouve sur la droite d'un essai la date et le temps d'éxécution du pipeline.
+Les états de passage sont symbolisés par les croix rouges (le pipeline a échoué) et le symbole de validation vert (le pipeline fonctionne). Les titres des essais correspondent au nom du commit qui lui est associé. En termes de métriques, on retrouve sur la droite d'un essai la date et le temps d'exécution du pipeline.
 
-En cliquant sur une tentative de passage du pipeline, on peut voir des détails sur son execution :
+En cliquant sur une tentative de passage du pipeline, on peut voir des détails sur son exécution :
 
 ![image](./assets/lab2/detail_workflow.png)
 
@@ -771,7 +771,7 @@ Ces logs peuvent nous aider à comprendre à quelle étape un pipeline aurait pu
 
 ### 9. Test du pipeline
 
-Pour tester le fonctionnement de notre pipeline, nous allons retourner sur VSCode et effectuer une modification sur notre code dans ce fichier ci.
+Pour tester le fonctionnement de notre pipeline, nous allons retourner sur VSCode et effectuer une modification sur notre code dans ce fichier-ci.
 
 Merci d'ajouter un x dans la case suivante [ ] :
 
@@ -779,7 +779,7 @@ Merci d'ajouter un x dans la case suivante [ ] :
 [] J'ai complété l'étape de test du pipeline
 ```
 
-Par la suite, nous allons effectuer la suite de commande pour pousser notre code sur le repository distant :
+Par la suite, nous allons effectuer la suite de commandes pour pousser notre code sur le repository distant :
 
 ```bash
 git add *
@@ -793,7 +793,7 @@ git commit -m "Complete pipeline test"
 git push
 ```
 
-Ensuite, rendez vous sur l'onglet "Actions" de votre repository GitHub pour y voir le pipeline se rouler !
+Ensuite, rendez-vous sur l'onglet "Actions" de votre repository GitHub pour y voir le pipeline se rouler !
 
 ---
 
@@ -803,7 +803,7 @@ Afin de simplifier l'intégration continue, nous avons décidé d'utiliser la te
 
 Cette étape requière la création d'un fichier **Dockerfile** que nous avons déjà créé pour vous.
 
-Il ne vous reste plus qu'à lancer le logiciel Docker Desktop sur votre machine, et dans lancer dans votre terminal la commande suivante :
+Il ne vous reste plus qu'à lancer le logiciel Docker Desktop sur votre machine, et de lancer dans votre terminal la commande suivante :
 
 ```bash
 docker build . --tag {YOUR_NAME}/hvac-controller
@@ -817,7 +817,7 @@ docker run -d --name hvac-controller --env-file ./.env {YOUR_NAME}/hvac-controll
 
 Pour vérifier son fonctionnement, ouvrez votre instance de Docker Desktop dans l'onglet **Containers** puis ouvrez le container nommé **hvac-controller** pour y voir les logs.
 
-Votre application est donc fonctionnel !
+Votre application est donc fonctionnelle !
 
 ---
 
@@ -859,7 +859,7 @@ On y retrouve ici les steps permettant le build de l'image Docker et son déploi
 
 Pour que ce pipeline soit fonctionnel, il est nécessaire d'ajouter les secrets : **DOCKERHUB_USERNAME** et **DOCKERHUB_TOKEN** (créée dans les prérequis) tel que décrit dans la partie 5.
 
-Pour tester le fonctionnement de notre pipeline, nous allons retourner sur VSCode et effectuer une modification sur notre code dans ce fichier ci.
+Pour tester le fonctionnement de notre pipeline, nous allons retourner sur VSCode et effectuer une modification sur notre code dans ce fichier-ci.
 
 Merci d'ajouter un x dans la case suivante [ ] :
 
@@ -867,7 +867,7 @@ Merci d'ajouter un x dans la case suivante [ ] :
 [] J'ai complété l'étape d'intégration continue du pipeline
 ```
 
-Par la suite, nous allons effectuer la suite de commande pour pousser notre code sur le repository distant :
+Par la suite, nous allons effectuer la suite de commandes pour pousser notre code sur le repository distant :
 
 ```bash
 git add *

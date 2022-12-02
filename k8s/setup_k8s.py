@@ -7,14 +7,14 @@ from kubernetes.client.rest import ApiException
 from pprint import pprint
 
 configMapDict = {
-    "HOST": os.environ["HVAC_HOST"],
-    "TICKETS": os.environ["HVAC_TICKETS"],
+    "HVAC_HOST": os.environ["HVAC_HOST"],
+    "HVAC_TICKETS": os.environ["HVAC_TICKETS"],
     "T_MAX": os.environ["T_MAX"],
     "T_MIN": os.environ["T_MIN"],
 }
 
 secretDict = {
-    "TOKEN": os.environ["HVAC_TOKEN"],
+    "HVAC_TOKEN": os.environ["HVAC_TOKEN"],
 }
 
 
